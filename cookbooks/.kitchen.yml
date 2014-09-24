@@ -3,12 +3,15 @@ driver:
   name: docker
 
 platforms:
-- name: ubuntu
-  run_list:
-  - recipe[mysql]
-- name: centos
+- name: ubuntu-12.04
   driver_config:
-    image: centos
-    platform: rhel
+    image: ubuntu:12.04
+    platform: ubuntu
   run_list:
   - recipe[mysql]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mysql]
+    attributes:
