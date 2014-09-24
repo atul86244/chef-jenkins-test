@@ -3,10 +3,10 @@ driver:
   name: docker
 
 platforms:
-- name: ubuntu-12.04
+- name: centos-6.5
   driver_config:
-    image: ubuntu
-    platform: ubuntu
+    image: centos
+    platform: rhel
   run_list:
   - recipe[mysql]
 
