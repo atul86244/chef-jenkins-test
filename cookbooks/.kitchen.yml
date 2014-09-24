@@ -5,7 +5,7 @@ driver:
 platforms:
 - name: ubuntu-12.04
   driver_config:
-    image: ubuntu:12.04
+    image: ubuntu
     platform: ubuntu
   run_list:
   - recipe[mysql]
